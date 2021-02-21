@@ -5,9 +5,6 @@
 //  Created by Aleksei Goranov on 21.02.2021.
 //
 
-import Foundation
-
-
 class GoodsDataManager {
     
     static let shared = GoodsDataManager()
@@ -22,6 +19,4 @@ class GoodsDataManager {
     ]
     
     private init() {}
-    
-    
 }

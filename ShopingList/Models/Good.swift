@@ -5,8 +5,6 @@
 //  Created by Aleksei Goranov on 21.02.2021.
 //
 
-import Foundation
-
 struct Good {
     let name: String
     let count: Int
