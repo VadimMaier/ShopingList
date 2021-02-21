@@ -12,13 +12,13 @@
         <!--List of notes-->
         <scene sceneID="kB4-de-0Ax">
             <objects>
-                <tableViewController id="3W8-a3-cXG" sceneMemberID="viewController">
+                <tableViewController id="3W8-a3-cXG" customClass="ListOfNotesController" customModule="ShopingList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xx1-hD-8jp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aXa-Ow-18t">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="aXa-Ow-18t">
                                 <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aXa-Ow-18t" id="GV3-Ei-Yjy">
@@ -47,13 +47,13 @@
         <!--Recipes-->
         <scene sceneID="tZj-3m-fGK">
             <objects>
-                <tableViewController id="256-U3-bMy" sceneMemberID="viewController">
+                <tableViewController id="256-U3-bMy" customClass="RecipesController" customModule="ShopingList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G2V-Fz-hvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cdS-te-akY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="cdS-te-akY">
                                 <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdS-te-akY" id="npG-9x-9f3">
@@ -76,13 +76,13 @@
         <!--Add product-->
         <scene sceneID="e2S-bZ-RTT">
             <objects>
-                <viewController id="iA5-Wy-HJh" sceneMemberID="viewController">
+                <viewController id="iA5-Wy-HJh" customClass="AddViewController" customModule="ShopingList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drO-gV-Kvt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="feb-wG-BLU">
-                                <rect key="frame" x="16" y="260" width="288" height="90"/>
+                                <rect key="frame" x="16" y="234" width="288" height="142"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfS-Lj-HVW">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
@@ -102,40 +102,30 @@
                                             </stepper>
                                         </subviews>
                                     </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-lg-lcr">
-                                <rect key="frame" x="125" y="384" width="70" height="81"/>
-                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guu-SE-trQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <rect key="frame" x="0.0" y="112" width="288" height="30"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Add"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCo-Rk-tQy">
-                                        <rect key="frame" x="0.0" y="51" width="70" height="30"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                        </state>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="9wg-LM-dNf"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RVN-Yg-ucO"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RVN-Yg-ucO" firstAttribute="trailing" secondItem="feb-wG-BLU" secondAttribute="trailing" constant="16" id="5Fx-cs-fdo"/>
                             <constraint firstItem="feb-wG-BLU" firstAttribute="centerX" secondItem="drO-gV-Kvt" secondAttribute="centerXWithinMargins" id="6UF-af-M5a"/>
                             <constraint firstItem="feb-wG-BLU" firstAttribute="leading" secondItem="RVN-Yg-ucO" secondAttribute="leading" constant="16" id="bPf-o7-a7u"/>
                             <constraint firstItem="feb-wG-BLU" firstAttribute="centerY" secondItem="RVN-Yg-ucO" secondAttribute="centerY" id="pgL-d4-cLC"/>
-                            <constraint firstItem="BmQ-lg-lcr" firstAttribute="centerX" secondItem="RVN-Yg-ucO" secondAttribute="centerX" id="r11-U1-uaZ"/>
-                            <constraint firstItem="RVN-Yg-ucO" firstAttribute="bottom" secondItem="BmQ-lg-lcr" secondAttribute="bottom" constant="54" id="zcX-sQ-Qa2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add product" image="plus" catalog="system" id="jw3-hf-OYZ"/>
+                    <connections>
+                        <outlet property="addButton" destination="guu-SE-trQ" id="qWa-QL-6dm"/>
+                        <outlet property="amountStepper" destination="ine-dq-wXG" id="iWV-9X-UAz"/>
+                        <outlet property="amountTextField" destination="WAv-eh-i6c" id="8EX-C3-LBz"/>
+                        <outlet property="productTextField" destination="HfS-Lj-HVW" id="guh-JY-jBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgW-V8-bKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +134,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="DfJ-Re-Sy7">
             <objects>
-                <tabBarController id="W2K-ih-RdQ" sceneMemberID="viewController">
+                <tabBarController id="W2K-ih-RdQ" customClass="TabBarController" customModule="ShopingList" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DZH-c5-4pk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kNO-1G-QQ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -185,11 +175,11 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
