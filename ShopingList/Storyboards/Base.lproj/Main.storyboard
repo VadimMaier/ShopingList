@@ -106,6 +106,9 @@
                                         <rect key="frame" x="0.0" y="112" width="288" height="30"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <segue destination="DhJ-ve-cxU" kind="unwind" unwindAction="unwindWithSeque:" id="XF1-vN-opv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -128,6 +131,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgW-V8-bKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DhJ-ve-cxU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2766" y="-231"/>
         </scene>

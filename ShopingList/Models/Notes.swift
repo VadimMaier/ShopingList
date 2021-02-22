@@ -9,7 +9,7 @@ import Foundation
 
 struct Note {
     let name: String
-    let count: Int
+    let count: String
 }
 
 extension Note {

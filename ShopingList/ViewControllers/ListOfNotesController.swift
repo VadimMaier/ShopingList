@@ -8,7 +8,17 @@
 import UIKit
 
 class ListOfNotesController: UITableViewController {
+    
+    var goodsList = Note.getNotes()
 
+    @IBAction func unwind(seque: UIStoryboardSegue) {
+        guard let addProductVC = seque.source as? AddViewController else { return }
+        guard let addProduct = addProductVC.productTextField.text else { return}
+        NotesDataManager.shared.names.append(addProduct)
+        print(goodsList)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,18 +27,24 @@ class ListOfNotesController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
+/*    override func numberOfSections(in tableView: UITableView) -> Int {
+        goodsList.count
+    } */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 0
+        goodsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        let good = goodsList[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = good.name
+        content.secondaryText = good.count
+        
+        cell.contentConfiguration = content
+        
         return cell
     }
 
