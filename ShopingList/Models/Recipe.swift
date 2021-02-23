@@ -7,7 +7,7 @@
 
 struct Recipe {
     let name: String
-    let goods: [String: Double]
+    let goods: [String: (quantity: Double, unitOfQuantity: String)]
 }
 
 extension Recipe {
@@ -15,7 +15,7 @@ extension Recipe {
         
         var newRecipes: [Recipe] = []
         
-        let recipes = RecipesDataManager.shared.recipes
+        let recipes = RecipesDataManager.shared.recipes2
         
         for recipe in recipes {
             newRecipes.append(Recipe(name: recipe.key,
