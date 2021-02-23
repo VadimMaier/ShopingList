@@ -14,8 +14,9 @@ class ListOfNotesController: UITableViewController {
     @IBAction func unwind(seque: UIStoryboardSegue) {
         guard let addProductVC = seque.source as? AddViewController else { return }
         guard let addProduct = addProductVC.productTextField.text else { return}
-        NotesDataManager.shared.names.append(addProduct)
-        print(goodsList)
+        guard let amount = addProductVC.amountTextField.text else { return}
+        goodsList.append(Note(name: addProduct, count: amount))
+        tableView.reloadData()
     }
     
     
