@@ -7,7 +7,7 @@
 
 struct Recipe {
     let name: String
-    let goods: [String: Int]
+    let goods: [String: Double]
 }
 
 extension Recipe {
