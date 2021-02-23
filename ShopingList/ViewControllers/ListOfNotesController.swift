@@ -9,13 +9,13 @@ import UIKit
 
 class ListOfNotesController: UITableViewController {
     
-    var goodsList = Note.getNotes()
+    var goodsList = Good.getNotes()
 
     @IBAction func unwind(seque: UIStoryboardSegue) {
         guard let addProductVC = seque.source as? AddViewController else { return }
         guard let addProduct = addProductVC.productTextField.text else { return}
         guard let amount = addProductVC.amountTextField.text else { return}
-        goodsList.append(Note(name: addProduct, count: amount))
+        goodsList.append(Good(name: addProduct, quantity: 2, unitOfQuantity: "qwe"))
         tableView.reloadData()
     }
     
@@ -47,7 +47,7 @@ class ListOfNotesController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = good.name
-        content.secondaryText = good.count
+        content.secondaryText = "\(good.quantity) \(good.unitOfQuantity)"
         
         cell.contentConfiguration = content
         
