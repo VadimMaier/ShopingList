@@ -88,6 +88,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iA5-Wy-HJh" id="LWm-1R-fdO"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-Wa-sds">
                                         <rect key="frame" x="0.0" y="56" width="288" height="34"/>
@@ -96,9 +99,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="iA5-Wy-HJh" id="Ma6-dq-Qgm"/>
+                                                </connections>
                                             </textField>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ine-dq-wXG">
                                                 <rect key="frame" x="194" y="2" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperActions:" destination="iA5-Wy-HJh" eventType="valueChanged" id="7Ir-ou-MfP"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -107,7 +116,8 @@
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
-                                            <segue destination="DhJ-ve-cxU" kind="unwind" unwindAction="unwindWithSeque:" id="XF1-vN-opv"/>
+                                            <action selector="addButtonAction" destination="iA5-Wy-HJh" eventType="touchUpInside" id="f9h-Jh-WSP"/>
+                                            <segue destination="J3y-KD-pJD" kind="unwind" unwindAction="unwindWithSeque:" id="Vfd-gT-Rrs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -131,7 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgW-V8-bKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="DhJ-ve-cxU" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="J3y-KD-pJD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2766" y="-231"/>
         </scene>
