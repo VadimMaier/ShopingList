@@ -9,7 +9,7 @@ import UIKit
 
 class AddViewController: UIViewController {
     
-    var goodsList = Note.getNotes()
+    var goodsList = Good.getNotes()
     
     @IBOutlet var productTextField: UITextField!
     @IBOutlet var amountTextField: UITextField!
@@ -46,7 +46,7 @@ class AddViewController: UIViewController {
         guard let amount = amountTextField.text else { return }
         if (Int(amount) != 0) {
             print("\(amount)")
-            goodsList.append(Note(name: name, count: String(amount)))
+            goodsList.append(Good(name: name, quantity: 123, unitOfQuantity: "kg"))
         }
         
     }
