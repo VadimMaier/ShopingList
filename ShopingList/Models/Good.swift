@@ -13,20 +13,6 @@ struct Good {
 
 extension Good {
     
-//    static func getNotes() -> [Good] {
-//
-//        var newGoods: [Good] = []
-//
-//        let goods = GoodsDataManager.shared.goods
-//
-//        for good in goods {
-//            newGoods.append(Good(name: good.key,
-//                                 count: good.value))
-//        }
-//
-//        return newGoods
-//    }
-    
     static func getNotes() -> [Good] {
         
         var newGoods: [Good] = []
