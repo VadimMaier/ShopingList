@@ -21,8 +21,6 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         addDoneButton(to: amountTextField)
         
-        
-        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(showKeyboard(notification:)),
                                                name: UIResponder.keyboardWillShowNotification,

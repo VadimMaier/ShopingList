@@ -60,6 +60,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rba-uD-LKQ" kind="unwind" unwindAction="unwindWithSeque:" id="msX-V3-NiE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -70,6 +73,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" image="book" catalog="system" id="ZJh-m3-2rJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htA-B0-USi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rba-uD-LKQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2766" y="494"/>
         </scene>

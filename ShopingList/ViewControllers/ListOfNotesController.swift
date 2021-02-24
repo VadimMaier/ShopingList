@@ -12,10 +12,15 @@ class ListOfNotesController: UITableViewController {
     var goodsList = Good.getNotes()
 
     @IBAction func unwind(seque: UIStoryboardSegue) {
-        guard let addProductVC = seque.source as? AddViewController else { return }
-        guard let addProduct = addProductVC.productTextField.text else { return}
-        guard let amount = addProductVC.amountTextField.text else { return}
-        goodsList.append(Good(name: addProduct, quantity: 2, unitOfQuantity: "qwe"))
+        if let addProductVC = seque.source as? AddViewController {
+            guard let addProduct = addProductVC.productTextField.text else { return}
+            goodsList.append(Good(name: addProduct, quantity: 2, unitOfQuantity: "qwe"))
+        }
+        else if let recipes = seque.source as? RecipesController {
+            print(recipes.goods.description)
+            goodsList += recipes.goods
+        }
+        
         tableView.reloadData()
     }
     

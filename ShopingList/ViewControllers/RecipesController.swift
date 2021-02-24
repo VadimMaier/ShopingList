@@ -10,21 +10,13 @@ import UIKit
 class RecipesController: UITableViewController {
     
     let recipes = Recipe.getRecipes()
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
+    var goods = [Good]()
 
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 0
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         recipes.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -36,5 +28,16 @@ class RecipesController: UITableViewController {
         cell.contentConfiguration = content
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        for good in recipes[indexPath.row].goods {
+            goods.append(
+                Good(name: good.key,
+                     quantity: good.value.quantity,
+                     unitOfQuantity: good.value.unitOfQuantity)
+            )
+        }
+        return indexPath
     }
 }
